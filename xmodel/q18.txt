@@ -1,0 +1,2 @@
+xm3_e04_roles.py qwen3-17b train --corr L4H1 --tag a3
+xm3_e04_roles.py qwen3-17b train --corr L4H1,L0H2,L0H12 --tag a4

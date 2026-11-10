@@ -1,0 +1,3 @@
+xm_conf.py ../specs/explore-pythia1b.json explore-pythia1b
+xm_conf.py ../specs/explore-qwen05b.json explore-qwen05b
+xm_conf.py ../specs/explore-olmo1b.json explore-olmo1b

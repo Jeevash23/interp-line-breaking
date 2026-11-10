@@ -1,0 +1,21 @@
+# Made by `make setup`, `make unpack`, `make attachments` and the paper targets; not part of the repository.
+.venv/
+__pycache__/
+attachments/
+outputs/
+xmodel/outputs/
+data/newtext/articles.jsonl
+data/newtext2/articles.jsonl
+data/newtext2/extracts.jsonl
+data/wikitext2/train-00000-of-00001.parquet
+xmodel/data/newtext3/articles.jsonl
+xmodel/data/newtext3/extracts.jsonl
+paper/v5-2026-11-10/figures/
+paper/v5-2026-11-10/*.aux
+paper/v5-2026-11-10/*.bbl
+paper/v5-2026-11-10/*.blg
+paper/v5-2026-11-10/*.fdb_latexmk
+paper/v5-2026-11-10/*.fls
+paper/v5-2026-11-10/*.log
+paper/v5-2026-11-10/*.out
+paper/v5-2026-11-10/*.pdf

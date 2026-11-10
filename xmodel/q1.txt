@@ -1,0 +1,7 @@
+xm_conf.py ../specs/smoke-pythia1b.json train --smoke
+xm_e04_roles.py pythia-1b train --count L1H1,L1H6,L2H5,L3H0,L3H5,L6H3 --corr L0H0,L1H1,L1H6 --tag c
+xm_e01_scan.py olmo1b train
+xm_e03_probe.py olmo1b train
+xm_e02_width.py olmo1b train
+xm_e05_count.py olmo1b train --tag a
+xm_e05_count.py qwen05b train --sets "L2H1,L3H1,L3H2,L6H1;L2H1,L3H1,L3H2,L6H1,L6H4,L6H6" --tag b

@@ -1,0 +1,34 @@
+{
+ "fetched_utc": "2026-11-06T10:40:19+00:00",
+ "n_articles": 2520,
+ "parts": {
+  "conf-pythia410m": {
+   "paragraphs": 264,
+   "articles": 146
+  },
+  "explore-pythia1b": {
+   "paragraphs": 235,
+   "articles": 130
+  },
+  "conf-pythia1b": {
+   "paragraphs": 274,
+   "articles": 146
+  },
+  "explore-qwen05b": {
+   "paragraphs": 213,
+   "articles": 118
+  },
+  "conf-qwen05b": {
+   "paragraphs": 269,
+   "articles": 143
+  },
+  "explore-olmo1b": {
+   "paragraphs": 247,
+   "articles": 131
+  },
+  "conf-olmo1b": {
+   "paragraphs": 238,
+   "articles": 132
+  }
+ }
+}

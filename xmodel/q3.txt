@@ -1,0 +1,2 @@
+xm_e04_roles.py olmo1b train --store L0H9,L1H10,L1H12,L3H7 --tag s1
+xm_e04_roles.py olmo1b train --store L5H0 --tag s2

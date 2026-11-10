@@ -1,0 +1,2 @@
+xm3_conf.py ../specs/conf-qwen3-17b.json conf-qwen3-17b
+xm3_conf.py ../specs/conf-qwen3-06b.json conf-qwen3-06b

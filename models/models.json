@@ -1,0 +1,497 @@
+{
+ "about": "Checkpoints the study loaded (Hugging Face Hub repositories and revisions) with the SHA-256 and size of every file, recorded from the copies the runs used.",
+ "models": {
+  "pythia-410m": {
+   "repo": "EleutherAI/pythia-410m",
+   "revision": "9879c9b5f8bea9051dcb0e68dff21493d67e9d4f",
+   "folder": "pythia-410m",
+   "used_by": "every round of the main study (Sections 4-7)",
+   "files": {
+    "config.json": {
+     "sha256": "d4c11e84a59c8af4d88446bba53b718f7aef740daa070ded08fd6a9a3aca4fc6",
+     "bytes": 570
+    },
+    "model.safetensors": {
+     "sha256": "3e09001631bb18ec8a6f4522f8e6ab26a53099e69228f9822adc91bfbe27511b",
+     "bytes": 911373632
+    },
+    "special_tokens_map.json": {
+     "sha256": "6f50ab5a5a509a1c309d6171f339b196a900dc9c99ad0408ff23bb615fdae7ad",
+     "bytes": 99
+    },
+    "tokenizer.json": {
+     "sha256": "c24618a1b3e6a38167beff1c72cffd126c3a66254347304b50547d12c5f25624",
+     "bytes": 2113710
+    },
+    "tokenizer_config.json": {
+     "sha256": "70e38394e494931c6f773ba41e19460dd4436526b852207367f04341b4066d3f",
+     "bytes": 396
+    }
+   }
+  },
+  "pythia-1b": {
+   "repo": "EleutherAI/pythia-1b",
+   "revision": "f73d7dcc545c8bd326d8559c8ef84ffe92fea6b2",
+   "folder": "pythia-1b",
+   "used_by": "exploration exp01; cross-model PROTOCOL-X1",
+   "files": {
+    "config.json": {
+     "sha256": "302d6702a29de1039066e41404877fb8c53b7ddc82e88f9aba277f230086cfe0",
+     "bytes": 569
+    },
+    "model.safetensors": {
+     "sha256": "7e6dff44849e036a73296368e663bd9420009977f03a8d4d747b234264f37107",
+     "bytes": 2090701528
+    },
+    "special_tokens_map.json": {
+     "sha256": "6f50ab5a5a509a1c309d6171f339b196a900dc9c99ad0408ff23bb615fdae7ad",
+     "bytes": 99
+    },
+    "tokenizer.json": {
+     "sha256": "c24618a1b3e6a38167beff1c72cffd126c3a66254347304b50547d12c5f25624",
+     "bytes": 2113710
+    },
+    "tokenizer_config.json": {
+     "sha256": "70e38394e494931c6f773ba41e19460dd4436526b852207367f04341b4066d3f",
+     "bytes": 396
+    }
+   }
+  },
+  "gpt2": {
+   "repo": "openai-community/gpt2",
+   "revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+   "folder": "gpt2",
+   "used_by": "exploration exp01, exp24; round-4 test X",
+   "files": {
+    "config.json": {
+     "sha256": "0daed7749b4f02b8f76240d5444551d7b08712dab4d0adb8239c56ba823bb7b4",
+     "bytes": 665
+    },
+    "generation_config.json": {
+     "sha256": "ed0b32ac72c0f5f44a719abb2d7786ea5146c871f83717b7f2018065954de02b",
+     "bytes": 124
+    },
+    "merges.txt": {
+     "sha256": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5",
+     "bytes": 456318
+    },
+    "model.safetensors": {
+     "sha256": "248dfc3911869ec493c76e65bf2fcf7f615828b0254c12b473182f0f81d3a707",
+     "bytes": 548105171
+    },
+    "onnx/config.json": {
+     "sha256": "c6d8a78631f7a03a14493eb78d584ba92c8e68c8774b810426b34df1f8a15b10",
+     "bytes": 879
+    },
+    "onnx/generation_config.json": {
+     "sha256": "067a873d1d1a67ffa7237a0ad0eebdb547d3f9209793c8aa476ec130815e3c8c",
+     "bytes": 119
+    },
+    "onnx/merges.txt": {
+     "sha256": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5",
+     "bytes": 456318
+    },
+    "onnx/special_tokens_map.json": {
+     "sha256": "6f50ab5a5a509a1c309d6171f339b196a900dc9c99ad0408ff23bb615fdae7ad",
+     "bytes": 99
+    },
+    "onnx/tokenizer.json": {
+     "sha256": "cda20b8ca044949aa07ac4078420c80d1a57139d5f9f33700e46fb2d891e7c66",
+     "bytes": 2107653
+    },
+    "onnx/tokenizer_config.json": {
+     "sha256": "551e26ec611d8d0c8edc3ef72e518a38418cb71f40de1347dd486a595e1557d7",
+     "bytes": 234
+    },
+    "onnx/vocab.json": {
+     "sha256": "3ba3c3109ff33976c4bd966589c11ee14fcaa1f4c9e5e154c2ed7f99d80709e7",
+     "bytes": 798156
+    },
+    "tokenizer.json": {
+     "sha256": "8414cab924d8b9b33013f0d221c5862f365ee9be39c5c2bfae8a5a9e970478a6",
+     "bytes": 1355256
+    },
+    "tokenizer_config.json": {
+     "sha256": "5e04eb606e3a1583530a42e36c2a6b6615c86f34fe77e44d9ddeb43ff940931f",
+     "bytes": 26
+    },
+    "vocab.json": {
+     "sha256": "196139668be63f3b5d6574427317ae82f612a97c5d1cdaf36ed2256dbf636783",
+     "bytes": 1042301
+    }
+   }
+  },
+  "qwen2.5-0.5b": {
+   "repo": "Qwen/Qwen2.5-0.5B",
+   "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+   "folder": "qwen2.5-0.5b",
+   "used_by": "cross-model PROTOCOL-X1",
+   "files": {
+    "config.json": {
+     "sha256": "479dcf0c5286339e41ad3992cd08ae88a467c4187587936248e2b7c96283484b",
+     "bytes": 681
+    },
+    "generation_config.json": {
+     "sha256": "8c970692323e3ea0e9b8b0a4dca79388d31226e41f83c9fd6014804280ebf6e8",
+     "bytes": 138
+    },
+    "merges.txt": {
+     "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+     "bytes": 1671839
+    },
+    "model.safetensors": {
+     "sha256": "88c142557820ccad55bb59756bfcfcf891de9cc6202816bd346445188a0ed342",
+     "bytes": 988097824
+    },
+    "tokenizer.json": {
+     "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+     "bytes": 7031645
+    },
+    "tokenizer_config.json": {
+     "sha256": "c91efca15ceff6e9ee9424db58a6f59cd41294e550a86cbd07e3c1fb500b34f9",
+     "bytes": 7228
+    },
+    "vocab.json": {
+     "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+     "bytes": 2776833
+    }
+   }
+  },
+  "olmo-2-1b": {
+   "repo": "allenai/OLMo-2-0425-1B",
+   "revision": "a1847dff35000b4271fa70afc5db10fd29fedbdf",
+   "folder": "olmo-2-1b",
+   "used_by": "cross-model PROTOCOL-X1 and PROTOCOL-X2",
+   "files": {
+    ".gitattributes": {
+     "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+     "bytes": 1519
+    },
+    "README.md": {
+     "sha256": "8e09b3ce741d945b340e51530dd95f49c646a210d0342b1a831a19e36928758b",
+     "bytes": 12892
+    },
+    "config.json": {
+     "sha256": "3dc581384d61b3366fc34a95d12c20e595014ea62352469c17c3e3a77f32882a",
+     "bytes": 623
+    },
+    "generation_config.json": {
+     "sha256": "6b4e5d0f5199345ef9e1f55139f13451f65eb5bd308a40718df1874ee2998ecf",
+     "bytes": 121
+    },
+    "merges.txt": {
+     "sha256": "b6fe424e334903f7fb84d3a106d9730455f4744b9fe3c21ee136d97a00e72502",
+     "bytes": 916646
+    },
+    "model-00001-of-00002.safetensors": {
+     "sha256": "c52e4ac8bf4867e698d908f9e8c2b84aa891b91dff066d46bf2a7cf453ad77fb",
+     "bytes": 4983360992
+    },
+    "model-00002-of-00002.safetensors": {
+     "sha256": "5f80762572fe28aca49b01b98895d96ca529b9792fc10925a977a161ad768d30",
+     "bytes": 956326560
+    },
+    "model.safetensors.index.json": {
+     "sha256": "704e57695805a67b0c43220e60e31cf43948c387f39799b82b260bb4df8180e6",
+     "bytes": 14873
+    },
+    "special_tokens_map.json": {
+     "sha256": "3c6bf7c09d5473c303cee8575a22bb51e5153c17d177a721b43cd4785c6d09ae",
+     "bytes": 125
+    },
+    "tokenizer.json": {
+     "sha256": "73fd5254624f39a88e3faac6a8e11300fc3c735ed37880d4f4f08db898eaecca",
+     "bytes": 7137177
+    },
+    "tokenizer_config.json": {
+     "sha256": "91c69c665697785ace4ec7dbd159e1839bc9bb5033ab05a56bb0547521dc9ab0",
+     "bytes": 4345
+    },
+    "vocab.json": {
+     "sha256": "9e14712c91b37c7aab74b1306baa46ac342d620637a4b44523cdc3aec7d24195",
+     "bytes": 1611056
+    }
+   }
+  },
+  "qwen3-1.7b-base": {
+   "repo": "Qwen/Qwen3-1.7B-Base",
+   "revision": "ea980cb0a6c2ae4b936e82123acc929f1cec04c1",
+   "folder": "qwen3-1.7b-base",
+   "used_by": "cross-model PROTOCOL-X3",
+   "files": {
+    ".gitattributes": {
+     "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+     "bytes": 1519
+    },
+    "LICENSE": {
+     "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+     "bytes": 11343
+    },
+    "README.md": {
+     "sha256": "579b9d7052fa567f439114f01feceed2b06f47d830d06c8ac829f389fd2e39a4",
+     "bytes": 2941
+    },
+    "config.json": {
+     "sha256": "1bb33a92c3548fbc68b889b490e810440435253598835bd71dff0396060c12db",
+     "bytes": 727
+    },
+    "generation_config.json": {
+     "sha256": "8c970692323e3ea0e9b8b0a4dca79388d31226e41f83c9fd6014804280ebf6e8",
+     "bytes": 138
+    },
+    "merges.txt": {
+     "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+     "bytes": 1671853
+    },
+    "model.safetensors": {
+     "sha256": "6df85b39330e5a425ee36253d0f894e4387e4f0a15b9c53cb467d668e6b3a841",
+     "bytes": 3441185608
+    },
+    "tokenizer.json": {
+     "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+     "bytes": 7031645
+    },
+    "tokenizer_config.json": {
+     "sha256": "3c04ed3ca964ea2f6b2b5faf0dc4d31aec1cb1e8b4bcf63f402d295046b422b5",
+     "bytes": 9678
+    },
+    "vocab.json": {
+     "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+     "bytes": 2776833
+    }
+   }
+  },
+  "qwen3-0.6b-base": {
+   "repo": "Qwen/Qwen3-0.6B-Base",
+   "revision": "da87bfb608c14b7cf20ba1ce41287e8de496c0cd",
+   "folder": "qwen3-0.6b-base",
+   "used_by": "cross-model PROTOCOL-X3",
+   "files": {
+    ".gitattributes": {
+     "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+     "bytes": 1519
+    },
+    "LICENSE": {
+     "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+     "bytes": 11343
+    },
+    "README.md": {
+     "sha256": "910d9be25c648ab1cb5a7b1d20d67ca6d43d43559a705010198886f9af68e8f1",
+     "bytes": 2973
+    },
+    "config.json": {
+     "sha256": "504a6b58c4271583724e66584b6b7698aea18450209df6b2f7582df0e89cee59",
+     "bytes": 727
+    },
+    "generation_config.json": {
+     "sha256": "8c970692323e3ea0e9b8b0a4dca79388d31226e41f83c9fd6014804280ebf6e8",
+     "bytes": 138
+    },
+    "merges.txt": {
+     "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+     "bytes": 1671853
+    },
+    "model.safetensors": {
+     "sha256": "cd2a512003e2f9f3cd3c32a9c3573f820bb28c940f73c57b1ddaa983d9223eba",
+     "bytes": 1192135096
+    },
+    "tokenizer.json": {
+     "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+     "bytes": 7031645
+    },
+    "tokenizer_config.json": {
+     "sha256": "3c04ed3ca964ea2f6b2b5faf0dc4d31aec1cb1e8b4bcf63f402d295046b422b5",
+     "bytes": 9678
+    },
+    "vocab.json": {
+     "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+     "bytes": 2776833
+    }
+   }
+  },
+  "gemma-4-e2b": {
+   "repo": "google/gemma-4-E2B",
+   "revision": "433813a669639fd7eaa83155828e9000ed357d53",
+   "folder": "gemma-4-e2b",
+   "used_by": "cross-model PROTOCOL-X3b",
+   "files": {
+    ".gitattributes": {
+     "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+     "bytes": 1570
+    },
+    "README.md": {
+     "sha256": "4c4e89a23e46a5703148b4de82eafb5b650abc8f50ff616c090fb659602eb4a6",
+     "bytes": 27811
+    },
+    "config.json": {
+     "sha256": "e5faef0dd1a8f2437f6010721146b85433eaa90e679ef011e803c7ffefae73b8",
+     "bytes": 4914
+    },
+    "generation_config.json": {
+     "sha256": "de16fa1d777387d5fe6df54a9565d9c0f1213f7b31f2a2cf44805e27686d9c7c",
+     "bytes": 181
+    },
+    "model.safetensors": {
+     "sha256": "76dc84a5a805a2c8b91e9ccc00b8dbf8f4a99bf0d56ab25832f6e6addd4f7f57",
+     "bytes": 10246621918
+    },
+    "processor_config.json": {
+     "sha256": "32bdf45d2ad4cc29a0822ddd157a182de76644f0419a6228d151495256e9813c",
+     "bytes": 1689
+    },
+    "tokenizer.json": {
+     "sha256": "9cad58a1ba9824a35574be51e8c9dcc2164a662cdfe56b1b008e06a231f80f0b",
+     "bytes": 32157288
+    },
+    "tokenizer_config.json": {
+     "sha256": "12754e3442e47c1a1c55d550b617fc47ae227e8156ed1b1de0d8428195768b5c",
+     "bytes": 906
+    }
+   }
+  },
+  "smollm2-1.7b": {
+   "repo": "HuggingFaceTB/SmolLM2-1.7B",
+   "revision": "effd688a12921b4cc83e3312b6feb579f70f9c71",
+   "folder": "smollm2-1.7b",
+   "used_by": "cross-model PROTOCOL-X3b (SmolLM2 addendum)",
+   "files": {
+    ".gitattributes": {
+     "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+     "bytes": 1519
+    },
+    "README.md": {
+     "sha256": "83c5404c1162e01c59e08fec9e8233b357ecf0ca3249e78f4b1ee13c5b3c320c",
+     "bytes": 7201
+    },
+    "config.json": {
+     "sha256": "33397f6af8090f7290f27ce6fb1cd23a95fd0915a5c648dfd10b6002aaf7fc48",
+     "bytes": 635
+    },
+    "generation_config.json": {
+     "sha256": "2056c988e990b0d13670f63f2f3b87b3b6d07edaf7a3416998ba27dab2d8a059",
+     "bytes": 111
+    },
+    "merges.txt": {
+     "sha256": "0b54e8aa4e53d5383e2e4bc635a56b43f9647f7b13832d5d9ecd8f82dac4f510",
+     "bytes": 466391
+    },
+    "model.safetensors": {
+     "sha256": "1193528982f4ac0c0b707ce36fd7dc03a0ef6f3e1a432deb886dce2e90c300c0",
+     "bytes": 3422777952
+    },
+    "special_tokens_map.json": {
+     "sha256": "e786b595b9a23148bf1630df78d9037a048ea671e48bfd3549a1e3c233742bb3",
+     "bytes": 831
+    },
+    "tokenizer.json": {
+     "sha256": "9ca9acddb6525a194ec8ac7a87f24fbba7232a9a15ffa1af0c1224fcd888e47c",
+     "bytes": 2104556
+    },
+    "tokenizer_config.json": {
+     "sha256": "4bb9af56a342753d39374f4016a16574cab299fe088e896f425ce3c433f61424",
+     "bytes": 3658
+    },
+    "vocab.json": {
+     "sha256": "82b84012e3add4d01d12ba14442026e49b8cbbaead1f79ecf3d919784f82dc79",
+     "bytes": 800662
+    }
+   }
+  },
+  "pythia-410m-step1000": {
+   "repo": "EleutherAI/pythia-410m",
+   "revision": "step1000",
+   "folder": "pythia-410m-step1000",
+   "used_by": "training checkpoints, exploration exp26 (Section 8.1); the code reads them from ~/.cache/d1-checkpoints/step1000",
+   "files": {
+    "config.json": {
+     "sha256": "d4c11e84a59c8af4d88446bba53b718f7aef740daa070ded08fd6a9a3aca4fc6",
+     "bytes": 570
+    },
+    "pytorch_model.bin": {
+     "sha256": "f2b606b7506ddae25598b2773142797c9b3bf85a465e425e4ac6d956ffedac5f",
+     "bytes": 911449213
+    }
+   }
+  },
+  "pythia-410m-step2000": {
+   "repo": "EleutherAI/pythia-410m",
+   "revision": "step2000",
+   "folder": "pythia-410m-step2000",
+   "used_by": "training checkpoints, exploration exp26 (Section 8.1); the code reads them from ~/.cache/d1-checkpoints/step2000",
+   "files": {
+    "config.json": {
+     "sha256": "d4c11e84a59c8af4d88446bba53b718f7aef740daa070ded08fd6a9a3aca4fc6",
+     "bytes": 570
+    },
+    "pytorch_model.bin": {
+     "sha256": "e6cab43c14eef1956a97b338ac491af491a8389839dc94b2dcf9719d2dfb8e90",
+     "bytes": 911449213
+    }
+   }
+  },
+  "pythia-410m-step4000": {
+   "repo": "EleutherAI/pythia-410m",
+   "revision": "step4000",
+   "folder": "pythia-410m-step4000",
+   "used_by": "training checkpoints, exploration exp26 (Section 8.1); the code reads them from ~/.cache/d1-checkpoints/step4000",
+   "files": {
+    "config.json": {
+     "sha256": "d4c11e84a59c8af4d88446bba53b718f7aef740daa070ded08fd6a9a3aca4fc6",
+     "bytes": 570
+    },
+    "pytorch_model.bin": {
+     "sha256": "9c435ff8e725d4572c3e2b1b5d6a1831adf97053ce9e1ad9e8f3f216ed694b78",
+     "bytes": 911449213
+    }
+   }
+  },
+  "pythia-410m-step8000": {
+   "repo": "EleutherAI/pythia-410m",
+   "revision": "step8000",
+   "folder": "pythia-410m-step8000",
+   "used_by": "training checkpoints, exploration exp26 (Section 8.1); the code reads them from ~/.cache/d1-checkpoints/step8000",
+   "files": {
+    "config.json": {
+     "sha256": "d4c11e84a59c8af4d88446bba53b718f7aef740daa070ded08fd6a9a3aca4fc6",
+     "bytes": 570
+    },
+    "pytorch_model.bin": {
+     "sha256": "354f5347063476eb82594fd5e46cea7c97a2be45c93e0de9bff3d5d9703b55cf",
+     "bytes": 911449213
+    }
+   }
+  },
+  "pythia-410m-step16000": {
+   "repo": "EleutherAI/pythia-410m",
+   "revision": "step16000",
+   "folder": "pythia-410m-step16000",
+   "used_by": "training checkpoints, exploration exp26 (Section 8.1); the code reads them from ~/.cache/d1-checkpoints/step16000",
+   "files": {
+    "config.json": {
+     "sha256": "d4c11e84a59c8af4d88446bba53b718f7aef740daa070ded08fd6a9a3aca4fc6",
+     "bytes": 570
+    },
+    "pytorch_model.bin": {
+     "sha256": "2db123904a5878d9b73bd5113a4e1d25dee16ea3cf0562bf719915749c94325c",
+     "bytes": 911449213
+    }
+   }
+  },
+  "pythia-410m-step48000": {
+   "repo": "EleutherAI/pythia-410m",
+   "revision": "step48000",
+   "folder": "pythia-410m-step48000",
+   "used_by": "training checkpoints, exploration exp26 (Section 8.1); the code reads them from ~/.cache/d1-checkpoints/step48000",
+   "files": {
+    "config.json": {
+     "sha256": "d4c11e84a59c8af4d88446bba53b718f7aef740daa070ded08fd6a9a3aca4fc6",
+     "bytes": 570
+    },
+    "pytorch_model.bin": {
+     "sha256": "ee8f7a19a4bcca7aea11391ce1ac32c385a52a325185ccdcf6067d09faa51baa",
+     "bytes": 911449213
+    }
+   }
+  }
+ }
+}

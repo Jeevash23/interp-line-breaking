@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper it accompanies."
+title: "Line-breaking in Pythia-410M: code and data release"
+abstract: "Code, frozen protocols, held-out text and saved outputs behind the paper 'Counting by dilution and a width stored at the newline: a partial account of line-breaking in Pythia-410M'."
+type: software
+authors:
+  - family-names: "Jeevash"
+    given-names: "Richard"
+    affiliation: "Independent researcher"
+    orcid: "https://orcid.org/0009-0005-7812-0939"
+version: "1.0"
+license: MIT
+repository-code: "https://github.com/Jeevash23/interp-line-breaking"
+keywords:
+  - mechanistic interpretability
+  - language models
+  - line breaking
+  - Pythia
+preferred-citation:
+  type: article
+  title: "Counting by dilution and a width stored at the newline: a partial account of line-breaking in Pythia-410M"
+  authors:
+    - family-names: "Jeevash"
+      given-names: "Richard"
+      orcid: "https://orcid.org/0009-0005-7812-0939"
+  year: 2026
+  notes: "Preprint; the reference will be added when it is public."

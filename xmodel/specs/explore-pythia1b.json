@@ -1,0 +1,3 @@
+{"model": "pythia-1b", "part_key": "pythia1b", "Lw": 6,
+ "sets": {"C": "L1H1,L1H6,L2H5,L3H0,L3H5,L6H3", "T": "L0H0,L1H1,L1H6", "S": "L3H5,L6H3,L9H4,L10H1,L1H1,L2H6", "R": "L12H6,L9H0,L7H3"},
+ "thresholds": {"C_share": 0.2, "C_random": 0.15, "T_coef": 0.1, "T_random": 0.1, "T_widths": [40, 60, 80], "S_share": 0.15, "S_random": 0.15, "S_kept": 0.5, "X_share": 0.35, "X_random": 0.15, "X_kept_max": 0.75, "R_share": 0.25, "R_random": 0.15}}

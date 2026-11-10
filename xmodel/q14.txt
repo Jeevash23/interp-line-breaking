@@ -1,0 +1,3 @@
+xm3_e05_count.py qwen3-17b train --sets "L4H0,L4H1,L5H13,L6H2,L7H15;L15H3,L17H6,L22H3" --tag b
+xm3_e04_roles.py qwen3-17b train --count L4H0,L4H1,L5H13,L7H15 --corr L4H1,L0H2,L0H3 --tag a1
+xm3_e04_roles.py qwen3-17b train --store L5H12,L5H13,L6H2 --read L7H14,L15H3,L17H6,L22H3 --lw 6 --tag a2

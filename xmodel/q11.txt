@@ -1,0 +1,2 @@
+xm3_e00_precision.py qwen3-17b bf16gpu
+xm3_e01_scan.py qwen3-17b train

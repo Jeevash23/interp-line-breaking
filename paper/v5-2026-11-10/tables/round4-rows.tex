@@ -1,0 +1,21 @@
+D1 & MLPs 14, 16, 18 frozen: share of COUNT effect lost & 0.215 [0.203, 0.228] & $\geq$ 0.11, lower bound $>$ 0 &  \\
+ & minus mean of ten random MLP triples (0.033) & 0.182 [0.172, 0.192] & lower bound $>$ 0 & pass \\
+D2 & MLPs 21, 23 frozen: share of COUNT effect lost & $-$0.358 [$-$0.404, $-$0.315] & $\leq$ $-$0.10, upper bound $<$ 0 &  \\
+ & MLPs 21, 23 frozen: share of WIDTH effect lost & $-$0.442 [$-$0.552, $-$0.344] & $\leq$ $-$0.10, upper bound $<$ 0 & pass \\
+D3 & cosine of COUNT and WIDTH changes, after layer 12 minus after layer 6 & 0.479 [0.407, 0.514] & $\geq$ 0.20, lower bound $>$ 0 &  \\
+ & cosine after layer 12 & 0.801 & $\geq$ 0.65 & pass \\
+D4 & largest head direct effect: COUNT L17H1 0.917 (next 0.233); WIDTH L17H1 0.411 (next 0.125) &  & L17H1 for both & pass \\
+\midrule
+S1 & late circuit only, decision token: AUROC (intact 0.978) & 0.976 & $\geq$ intact $-$ 0.02 &  \\
+ & same: width effect kept & 0.727 [0.663, 0.804] & $\geq$ 0.33, lower bound $>$ 0.280 & pass \\
+S2 & whole circuit: separation kept & 0.304 [0.279, 0.328] & $\geq$ 0.15, lower bound $>$ 0.163 & pass \\
+\midrule
+G1 & top direction after layer 5: variance share / linear $R^2$ (widths 40; 60) & 0.738 / 0.990; 0.689 / 0.945 & $\geq$ 0.50 / $\geq$ 0.85 & pass \\
+G2 & second direction after layer 6: spline minus linear $R^2$ (widths 40; 60) & 0.862; 0.796 & $\geq$ 0.30 & pass \\
+G3 & readers' attention to the line start: monotone $R^2$ (lowest); peak (largest characters remaining) & 0.993; 2 & $\geq$ 0.90; $\leq$ 5 & pass \\
+\midrule
+X1 & GPT-2 Small: best-layer probe $R^2$ for characters used & 0.809 & $\geq$ 0.70 & pass \\
+X2 & largest count-shift effect over layers, GPT-2 / Pythia-410M & 0.630 / 2.267 & ratio $\leq$ 0.5 & pass \\
+X3 & whole-prompt width effect, GPT-2 / Pythia-410M & 0.317 / 1.465 & ratio $\leq$ 0.5 & pass \\
+X4 & largest line-start share of a counting head, GPT-2 / Pythia-410M & 0.277 / 0.792 & ratio $\leq$ 0.5; Pythia $\geq$ 0.60 & pass \\
+X5 & width patch at the newline: GPT-2 after layers 8--11 (largest) / Pythia-410M after layer 8 & 0.047 / 0.352 & $<$ 0.10 / $\geq$ 0.25 & pass \\

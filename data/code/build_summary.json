@@ -1,0 +1,15 @@
+{
+ "source": "/usr/lib/python3.14",
+ "python": "3.14.9",
+ "n_files_parsed": 583,
+ "parts": {
+  "explore-code": {
+   "paragraphs": 428,
+   "files": 170
+  },
+  "conf5-code": {
+   "paragraphs": 374,
+   "files": 154
+  }
+ }
+}

@@ -1,0 +1,2 @@
+xm3_e04_roles.py gemma4-e2b train --corr L6H3 --read L9H5,L12H3 --lw 7 --tag a2
+xm3_e04_roles.py gemma4-e2b train --store L6H1,L6H3,L7H6 --tag a3

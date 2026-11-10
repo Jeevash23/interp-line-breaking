@@ -1,0 +1,3 @@
+{"model": "qwen3-06b", "part_key": "qwen3-06b", "Lw": 6,
+ "sets": {"C": "L4H0,L4H1,L5H13,L6H2,L7H15", "T": "L4H1", "S": "L5H12,L5H13,L6H2", "R": "L7H14,L15H3,L17H6,L22H3"},
+ "thresholds": {"C_share": 0.2, "C_random": 0.15, "T_coef": 0.1, "T_random": 0.1, "T_widths": [40, 60, 80], "S_share": 0.15, "S_random": 0.15, "S_kept": 0.5, "X_share": 0.35, "X_random": 0.15, "X_kept_max": 0.75, "R_share": 0.25, "R_random": 0.15}}

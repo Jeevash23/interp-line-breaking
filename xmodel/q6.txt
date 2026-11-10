@@ -1,0 +1,3 @@
+xm_conf.py ../specs/conf-pythia1b.json conf-pythia1b
+xm_conf.py ../specs/conf-qwen05b.json conf-qwen05b
+xm_conf.py ../specs/conf-olmo1b.json conf-olmo1b

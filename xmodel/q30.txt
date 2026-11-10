@@ -1,0 +1,2 @@
+xm3_e04_roles.py smollm2-17b train --corr L5H21,L3H2 --read L11H21 --lw 10 --tag a2
+xm3_e04_roles.py smollm2-17b train --store L5H21,L9H7,L6H25,L2H17 --tag a3

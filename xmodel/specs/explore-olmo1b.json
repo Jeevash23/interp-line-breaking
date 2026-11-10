@@ -1,0 +1,3 @@
+{"model": "olmo1b", "part_key": "olmo1b", "Lw": 3,
+ "sets": {"C": "L6H2,L7H10,L11H4,L14H15", "T": "L1H10,L0H5,L3H15", "S": "L0H9,L1H10,L1H12,L3H7", "X": "L5H0", "R": "L6H2,L7H10,L11H4"},
+ "thresholds": {"C_share": 0.2, "C_random": 0.15, "T_coef": 0.1, "T_random": 0.1, "T_widths": [40, 60, 80], "S_share": 0.15, "S_random": 0.15, "S_kept": 0.5, "X_share": 0.35, "X_random": 0.15, "X_kept_max": 0.75, "R_share": 0.25, "R_random": 0.15}}

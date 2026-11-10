@@ -1,0 +1,3 @@
+{"model": "gemma4-e2b", "part_key": "gemma4-e2b", "Lw": 7,
+ "sets": {"C": "L6H3,L12H3", "T": "L6H3", "S": "L6H1,L6H3,L7H6", "R": "L9H5,L12H3"},
+ "thresholds": {"C_share": 0.2, "C_random": 0.15, "T_coef": 0.1, "T_random": 0.1, "T_widths": [40, 60, 80], "S_share": 0.15, "S_random": 0.15, "S_kept": 0.5, "R_share": 0.25, "R_random": 0.15}}

@@ -1,0 +1,36 @@
+{
+ "exploration-activations.tar.xz": {
+  "contents": "exp03's saved activations (read only by the Figure 4 panel of make_figures.py, paper version 5)",
+  "members": {
+   "outputs/exp03_pythia-410m.npz": {
+    "sha256": "a0c9afc23ad930b99b45a14723ed5691c1befca19fa27a407305e2c001ce0cb5",
+    "size": 72397743
+   },
+   "outputs/exp03_pythia-410m_resid_L0-12.npy": {
+    "sha256": "c2f1719199a6c4ec3d63a08cf031bd15eb591ceded191e18c75a7e30b342bc15",
+    "size": 238293120
+   }
+  },
+  "sha256": "5ba9e6af7fb9dbd64ac7d0a7dc58f64408303196a1e96dd964248d2d35c0fe37",
+  "size": 274506792
+ },
+ "large-records.tar.xz": {
+  "contents": "the round-4 pipeline run's mean activations on the train split, and the per-item arrays of the post hoc reruns of rounds 1 and 2 (their summaries are in the repository)",
+  "members": {
+   "outputs/p4_01_decision_train_means.pt": {
+    "sha256": "08e9a8617ce1c0d4fb040d3cb2e8720229bce6fbc44fa90ba58b4bde3e84463f",
+    "size": 26336437
+   },
+   "outputs/posthoc_r12_test.npz": {
+    "sha256": "b17038e5b560b3458584b5dbcf5812b06ced366981ed19d514656f2f07a8a163",
+    "size": 9028040
+   },
+   "outputs/posthoc_r12_validation.npz": {
+    "sha256": "dea563bd2b642500b86ed889edae3bce5b9cd70843017f0357b1ad33c9338a5b",
+    "size": 9028936
+   }
+  },
+  "sha256": "9de340d53f5cb2cca92ac32a72b7f273817ca71e7f038b9bf49fd9861f174a49",
+  "size": 39286992
+ }
+}

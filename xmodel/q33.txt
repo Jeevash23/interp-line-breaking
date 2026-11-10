@@ -1,0 +1,1 @@
+xm3_conf.py ../specs/explore-smollm2-17b.json explore-smollm2-17b

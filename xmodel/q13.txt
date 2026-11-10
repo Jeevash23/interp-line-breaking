@@ -1,0 +1,4 @@
+xm3_e00_precision.py qwen3-06b bf16gpu
+xm3_e01_scan.py qwen3-06b train --chunk 0/2
+xm3_e01_scan.py qwen3-06b train --chunk 1/2
+xm3_e01_scan.py qwen3-06b train --chunk 2/2

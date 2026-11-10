@@ -1,0 +1,2 @@
+xm_e04_roles.py olmo1b train --count L6H2,L7H10,L11H4,L14H15 --store L0H9,L1H10,L1H12,L3H7,L5H0 --corr L1H10,L0H5,L3H15 --read L6H2,L7H10,L11H4 --tag a
+xm_e05_count.py olmo1b train --sets "L6H2,L7H10,L11H4,L14H15;L1H10,L0H5,L3H15,L2H14;L6H2" --tag b

@@ -1,0 +1,38 @@
+{
+ "fetched_utc": "2026-11-06T22:02:15+00:00",
+ "n_articles": 2520,
+ "parts": {
+  "explore-qwen3-06b": {
+   "paragraphs": 205,
+   "articles": 114
+  },
+  "conf-qwen3-06b": {
+   "paragraphs": 194,
+   "articles": 102
+  },
+  "explore-qwen3-17b": {
+   "paragraphs": 219,
+   "articles": 122
+  },
+  "conf-qwen3-17b": {
+   "paragraphs": 186,
+   "articles": 111
+  },
+  "explore-gemma4-e2b": {
+   "paragraphs": 212,
+   "articles": 117
+  },
+  "conf-gemma4-e2b": {
+   "paragraphs": 193,
+   "articles": 110
+  },
+  "explore-smollm2-17b": {
+   "paragraphs": 224,
+   "articles": 122
+  },
+  "conf-smollm2-17b": {
+   "paragraphs": 158,
+   "articles": 88
+  }
+ }
+}

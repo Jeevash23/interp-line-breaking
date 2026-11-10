@@ -1,0 +1,3 @@
+{"model": "smollm2-17b", "part_key": "smollm2-17b", "Lw": 10,
+ "sets": {"C": "L5H21,L7H22,L9H7", "T": "L5H21,L3H2", "S": "L5H21,L9H7,L6H25,L2H17", "R": "L11H21"},
+ "thresholds": {"C_share": 0.2, "C_random": 0.15, "T_coef": 0.1, "T_random": 0.1, "T_widths": [40, 60, 80], "S_share": 0.15, "S_random": 0.15, "S_kept": 0.5, "R_share": 0.25, "R_random": 0.15}}

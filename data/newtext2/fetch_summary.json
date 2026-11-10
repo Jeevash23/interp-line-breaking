@@ -1,0 +1,14 @@
+{
+ "fetched_utc": "2026-11-06T14:23:07+00:00",
+ "n_articles": 630,
+ "parts": {
+  "conf4-pythia410m": {
+   "paragraphs": 208,
+   "articles": 108
+  },
+  "reserve-pythia410m": {
+   "paragraphs": 200,
+   "articles": 116
+  }
+ }
+}

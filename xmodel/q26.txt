@@ -1,0 +1,2 @@
+xm3_e05_count.py gemma4-e2b train --sets "L6H3,L12H3;L6H1,L10H0,L10H1,L12H1,L12H2,L7H4" --tag b
+xm3_e04_roles.py gemma4-e2b train --count L6H3,L12H3 --tag a1

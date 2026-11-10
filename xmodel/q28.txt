@@ -1,0 +1,1 @@
+xm3_conf.py ../specs/conf-gemma4-e2b.json conf-gemma4-e2b

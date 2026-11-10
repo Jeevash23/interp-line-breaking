@@ -1,0 +1,1 @@
+xm_conf.py ../specs/smoke-olmo1b.json train --smoke

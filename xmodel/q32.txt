@@ -1,0 +1,2 @@
+xm3_e05_count.py smollm2-17b train --sets "L5H21,L7H22,L9H7;L5H21,L7H22,L9H7,L11H21" --tag b --sets-only
+xm3_e04_roles.py smollm2-17b train --count L5H21,L7H22,L9H7,L11H21 --tag a1

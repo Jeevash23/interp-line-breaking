@@ -1,0 +1,7 @@
+xm3_e01_scan.py gemma4-e2b train --chunk 0/3
+xm3_e01_scan.py gemma4-e2b train --chunk 1/3
+xm3_e01_scan.py gemma4-e2b train --chunk 2/3
+xm3_e01_scan.py gemma4-e2b train --chunk 3/3
+xm3_e02_width.py gemma4-e2b train
+xm3_e05_count.py gemma4-e2b train --tag a
+xm3_e03_probe.py gemma4-e2b train

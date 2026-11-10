@@ -1,0 +1,19 @@
+T1 & Leftover token weight, width 20 minus width 60 (English) & 0.147 [0.089, 0.204] & $\geq$ 0.04, lower bound $>$ 0 & pass \\
+T2 & Rank correlation of the leftover weight with tokens on the line (11 conditions) & $-$0.909 & $\leq$ $-$0.50 & pass \\
+T3 & Bias with L5H7 ablated, width 20 minus width 100 (English) & 0.316 [0.233, 0.391] & $\geq$ 0.15, lower bound $>$ 0 & pass \\
+T4 & L5H6 line-start attention per token, width 20 minus width 80 & $-$0.0108 [$-$0.0154, $-$0.0061] & $\leq$ $-$0.003, upper bound $<$ 0 & pass \\
+T5 & Rise when L5H7 is ablated, smallest of 11 conditions & 0.233 & each $\geq$ 0.10, lower bound $>$ 0 & pass \\
+\midrule
+M1 & Damping by MLPs 21, 23 with the final LayerNorm frozen: COUNT; WIDTH & $-$0.390 [$-$0.447, $-$0.337]; $-$0.534 [$-$0.667, $-$0.408] & $\leq$ $-$0.15 and within 0.10 of the free value & pass \\
+M2 & Damping by MLP23.736 and MLP21.1410 alone: COUNT; WIDTH & $-$0.406 [$-$0.454, $-$0.362]; $-$0.523 [$-$0.628, $-$0.419] & $\leq$ $-$0.15 and $\geq$ half the MLPs' damping & pass \\
+M3 & The two neurons ablated, natural text: newline; other likely tokens & 0.381 [0.359, 0.402]; $-$0.047 [$-$0.058, $-$0.039] & newline $\geq$ 0.15; other within $\pm$0.10 & pass \\
+M4 & Correlation of each neuron's activation with the newline log-odds & 0.833; 0.776 & each $\geq$ 0.50 & pass \\
+\midrule
+S1 & Fidelity of the fuller circuit, mean ablation & 0.785 [0.763, 0.805] & $\geq$ 0.50, lower bound $>$ random (0.117) & pass \\
+S2 & Separation kept, fuller minus round-4 circuit & 0.344 [0.315, 0.375] & $\geq$ 0.20, lower bound $>$ 0 & pass \\
+S3 & Width effect kept by the fuller circuit & 0.707 [0.612, 0.837] & $\geq$ 0.40, lower bound $>$ random (0.351) & pass \\
+S4 & Resample ablation: fidelity; separation kept & 0.217 [0.047, 0.359]; 0.355 & $\geq$ 0.15; $\geq$ 0.25; above the round-4 circuit & pass \\
+\midrule
+G1 & AUROC, lowest of 8 conditions & 0.871 & $\geq$ 0.80 in all & pass \\
+G2 & Counters and token corrector hold (cells) & 16 of 16 & all 16 & pass \\
+G3 & Width roles as predicted (cells) & 15 of 16 & $\geq$ 13 & pass \\
