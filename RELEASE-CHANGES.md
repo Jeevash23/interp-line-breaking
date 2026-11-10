@@ -3,7 +3,7 @@
 This release was exported from the folder in which the study ran. Files are copied byte for byte except those listed
 below. There are three kinds of change:
 
-- **adapted:** `paper/v5-2026-11-10/check_paper.py`, whose two architecture checks read the model configuration files
+- **adapted:** `paper/v6-2026-11-10/check_paper.py`, whose two architecture checks read the model configuration files
   from `models/configs/` (shipped copies) instead of a local model cache.
 - **redacted:** records and scripts in which personal or machine-specific strings were replaced: absolute paths by
   placeholders (`<home>`, `<hf-cache>`, `<environment>`, `<portfolio-root>`, `<workspace>`), the path of a temporary
@@ -51,7 +51,7 @@ when this file records that exact change.
 | `code/queue5.sh` | redacted (absolute path x1, environment path x1, time zone x1) | `3059ad6109a99dcda0f188c67a2318f995d37b4d8672b41ef7fee47d3aab059d` | - |
 | `code/run.sh` | redacted (absolute path x1, environment path x1, process wording x1) | `78eb1792c3a9ca942e4b18c5a296c7d64764a821b0619aabc377ec3ee0e7d23f` | - |
 | `data/code/MANIFEST.md` | redacted (machine details x1) | `224a4b5d2bee07dd808347c6837ccdc035dca3e1167a2b54e0d4b38c54873222` | `FROZEN.md` |
-| `paper/v5-2026-11-10/check_paper.py` | adapted: the model configuration files are read from the copies shipped in models/configs/ | `6d17ca0ea199f006c4a8aea1c89c530bcfe35ef6a68b707d056661903562a606` | - |
+| `paper/v6-2026-11-10/check_paper.py` | adapted: the model configuration files are read from the copies shipped in models/configs/ | `a6f7f64cba2047ee7c83e47787d166b6587bda2316a7159698e8da7cd1bb84f7` | - |
 | `xmodel/AMENDMENTS.md` | redacted (approval wording x5, machine details x2, process wording x4, quoted message x2, time zone x6) | `5438b262545ff27bb844cf7a8531488ba9d57ce6696db648e3146851b3215fcc` | `xmodel/FROZEN.md` |
 | `xmodel/CHARTER.md` | redacted (approval wording x4, machine details x2, process wording x8) | `0f3cec7e7e5865f298b37d121052fa6350c1d7f7289f9251fe6722a7019b7238` | `xmodel/FROZEN.md` |
 | `xmodel/FROZEN.md` | redacted (process wording x1, time zone x54) | `6cf7b338ad5edfa303c2c06af3f7b7036c712c675c4c41234f0d6c485d84e3b8` | - |

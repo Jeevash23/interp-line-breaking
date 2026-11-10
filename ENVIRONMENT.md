@@ -15,7 +15,7 @@ package held to the version installed where the study ran (`constraint-dependenc
 | accelerate, safetensors, tokenizers, huggingface-hub, pyarrow | 1.15.0, 0.8.0, 0.23.3, 2.1.1, 25.0.1 | the experiments (`experiment` extra) |
 
 The paper's numbers were checked with numpy 2.5.2 and torch 2.13.0 before this release, and with the versions above
-in a copy of this release; both gave 649 of 649 checks (paper version 3). Paper version 4 (10 November 2026) gave 648 of 648 checks, and paper version 5 (10 November 2026) 661 of 661 checks, with the versions above.
+in a copy of this release; both gave 649 of 649 checks (paper version 3). Paper version 4 (10 November 2026) gave 648 of 648 checks, paper version 5 (10 November 2026) 661 of 661 checks, and paper version 6 (10 November 2026) 712 of 712 checks, with the versions above.
 
 ## A fresh install
 

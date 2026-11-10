@@ -1,9 +1,9 @@
 # Line-breaking in Pythia-410M: code and data release
 
 This folder holds the code, frozen protocols, held-out text and saved outputs behind the paper *Counting by
-dilution and a width stored at the newline: a partial account of line-breaking in Pythia-410M* (version 5,
+dilution and a width stored at the newline: a partial account of line-breaking in Pythia-410M* (version 6,
 10 November 2026). Every number, table and figure in the paper can be regenerated from the saved outputs on a CPU, without a
-model or network access, and `make check` runs the paper's 661 number checks against them.
+model or network access, and `make check` runs the paper's 712 number checks against them.
 
 ## What the paper finds
 
@@ -12,7 +12,8 @@ current line holds, infer the width from earlier lines and compare the two. The 
 this. An exploration under a frozen charter proposed an account, and five confirmation rounds then tested its
 predictions on held-out text, each with hypotheses and thresholds frozen before the text was read. Because the
 predictions were written after exploration, the rounds show that the account repeats on new text. Three rounds used
-Wikipedia articles created after the model was trained; the fifth also used Python code and German text.
+Wikipedia articles created after the model was trained (such pages can still contain older text, so overlap
+with the training data remains possible); the fifth also used Python code and German text.
 
 - **Counting by dilution.** A head in layer 5 (L5H6) counts characters by how much attention it gives to the start
   of the line, which thins as the line grows; three other heads count with it. A second head (L5H7) removes a
@@ -28,8 +29,8 @@ Wikipedia articles created after the model was trained; the fifth also used Pyth
   roles were confirmed at width 60; in the fifth round's eight further conditions of width and text type the
   readers held in five and the stored length was detectable in one.
 - **How complete the account is.** The named circuit keeps the ranking of breaks but not their size. With 24
-  components found by a search it keeps 0.79 of the intact model's variation under mean ablation, but only 0.22
-  under resample ablation, so the account is partial.
+  components found by a search, its fidelity to the intact model's decision is 0.79 under mean ablation but only
+  0.22 under resample ablation. Neither figure is a share of the mechanism understood, and the account is partial.
 - **Other models.** GPT-2 Small carries a decodable count but uses it a quarter as strongly. Seven other open models
   (Pythia-1B, Qwen2.5-0.5B, OLMo-2-1B, Qwen3-1.7B-Base, Qwen3-0.6B-Base, Gemma-4-E2B, SmolLM2-1.7B) have heads in
   the same four roles, and all 29 frozen role tests passed, but the heads and their arrangement differ between model
@@ -50,7 +51,7 @@ Each result carries its label in the records and the paper: **exploratory** (und
 | `xmodel/` | The cross-model part (paper Sections 9.2–9.4): its charter, amendments, freeze record, protocols X1, X2, X3 and X3b, reports, code, run specifications (`specs/`), job lists (`q*.txt`) and the third batch of new text (`data/newtext3/`) |
 | `data/` | The text the study read: WikiText-2 (`wikitext2/`), the three batches of new English Wikipedia text (`newtext/`, `newtext2/`, `xmodel/data/newtext3/`), Python standard-library code (`code/`) and German Wikipedia text (`de/`), each split into frozen exploration and confirmation parts with a `MANIFEST.md` and `SHA256SUMS` |
 | `data/saved-outputs/` | The per-run outputs, packed as five archives (see its `README.md`); two larger archives are attached to the GitHub release (`data/ATTACHMENTS.json`) |
-| `paper/v5-2026-11-10/` | The paper's LaTeX source and the scripts that compute its numbers (`values.py`), write its tables (`make_tables.py`), draw its figures (`make_figures.py`) and check every number in the text (`check_paper.py`) |
+| `paper/v6-2026-11-10/` | The paper's LaTeX source and the scripts that compute its numbers (`values.py`), write its tables (`make_tables.py`), draw its figures (`make_figures.py`) and check every number in the text (`check_paper.py`) |
 | `models/` | The checkpoints the study used, with revisions and file digests (`models.json`), and copies of four model configuration files the paper's check reads |
 | `tools/` | Unpacking (of the saved outputs and of the release attachments), the freeze-record check and model download helpers |
 | `pyproject.toml`, `uv.lock`, `ENVIRONMENT.md` | The Python environment |
@@ -86,7 +87,7 @@ Most of the time is spent rerunning the round-4 and round-5 bootstraps. The end 
 
 ```text
 total: 30 changed for the release (documented), 3 superseded by a later dated entry, 109 unchanged
-661 checks, 0 failed
+712 checks, 0 failed
 ```
 
 "Changed for the release" are frozen records and scripts in which personal or machine-specific wording was
@@ -96,8 +97,8 @@ each new amendment.
 ## Tables, figures and the PDF
 
 ```sh
-make tables       # rewrite paper/v5-2026-11-10/tables/ from the saved outputs
-make figures      # Figures 2-5 into paper/v5-2026-11-10/figures/ (Figure 1 is drawn in the LaTeX source)
+make tables       # rewrite paper/v6-2026-11-10/tables/ from the saved outputs
+make figures      # Figures 2-5 into paper/v6-2026-11-10/figures/ (Figure 1 is drawn in the LaTeX source)
 make pdf          # the paper, with latexmk (needs a TeX installation)
 ```
 
@@ -172,3 +173,6 @@ number in the paper was generated from those outputs and checked by an independe
 ## Citation
 
 Richard Jeevash. *Counting by dilution and a width stored at the newline: a partial account of line-breaking in Pythia-410M*. Preprint, 2026. See `CITATION.cff`; the preprint's link will be added here when it is public.
+
+This repository is archived at Zenodo: https://doi.org/10.5281/zenodo.24112443 (all releases; release v1.0 is
+https://doi.org/10.5281/zenodo.24112444).

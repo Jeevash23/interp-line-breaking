@@ -142,7 +142,7 @@ rows.append(["S4", "Resample ablation: fidelity; separation kept", f"{f(r5('r5.s
 rows.append("\\midrule")
 gmin = min(V[k] for k in V if k.startswith("r5.g.") and k.endswith(".auroc"))
 rows.append(["G1", "AUROC, lowest of 8 conditions", f(gmin), "$\\geq$ 0.80 in all", pf(R5["G1"])])
-rows.append(["G2", "Counters and token corrector hold (cells)", f"{V['r5.g.cnt']} of 16", "all 16", pf(R5["G2"])])
+rows.append(["G2", "Counters and token corrector meet the frozen criteria (cells)", f"{V['r5.g.cnt']} of 16", "all 16", pf(R5["G2"])])
 rows.append(["G3", "Width roles as predicted (cells)", f"{V['r5.g.match']} of 16", "$\\geq$ 13", pf(R5["G3"])])
 write("round5", rows)
 

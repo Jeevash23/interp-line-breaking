@@ -8,7 +8,8 @@ authors:
     given-names: "Richard"
     affiliation: "Independent researcher"
     orcid: "https://orcid.org/0009-0005-7812-0939"
-version: "1.0"
+version: "1.1"
+doi: 10.5281/zenodo.24112443
 license: MIT
 repository-code: "https://github.com/Jeevash23/interp-line-breaking"
 keywords:

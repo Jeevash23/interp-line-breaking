@@ -1,4 +1,4 @@
-"""Check every number in the D1 paper (version 5) against the saved study outputs.
+"""Check every number in the D1 paper (version 6) against the saved study outputs.
 
 1. Tables: make_tables.py is re-run into a scratch folder and must reproduce tables/ exactly, so the tables are
    current with the outputs. Their verdicts come from the frozen outputs.
@@ -122,6 +122,20 @@ check(0.2 <= V["r4.x.gpt2.count"] / V["r4.x.p410.count"] <= 0.3, "GPT-2 uses the
 check(all(k in V for k in ("r4.med.C.readers3", "r4.med.C.MLP14_16_18", "r4.med.C.MLP21_23")) and V["r4.d4.C.top"] == "L17H1", "named decision parts: L6H2/L8H15/L17H1, MLPs 14, 16, 18, MLPs 21, 23")
 claim("layers 6 to 18"); claim("layers 6 to 23"); claim("layers 6 to 14", max(range(5, 24), key=lambda l: V[f"r4.cos.{l}"]) == 14)
 note("January 2025 and September 2026", "selection rule, data/newtext/MANIFEST.md")
+# version 6 wording: the new text was created after training, with overlap possible; novelty claims scoped
+claim("including Wikipedia articles created after the model was trained"); claim("after the model was trained, Python code and German text")
+claim("Pages created after training can still contain older text, so overlap with the training data remains possible",
+      "can still contain older text" in open(os.path.join(D1, "data", "newtext", "MANIFEST.md")).read())
+claim("The new text comes from pages created after Pythia was trained, but such pages can contain older text")
+claim("To our knowledge, the only causal account of fixed-width line-breaking comes from"); claim("To our knowledge, nobody has shown which components of an open model carry the count in fixed-width line-breaking")
+# code and data availability: the files the paragraph points to exist in the study folder (and in the release, where D1 is its root)
+claim("the two freeze records give the digests", all(os.path.exists(os.path.join(D1, f)) for f in ("FROZEN.md", "xmodel/FROZEN.md", "CHARTER.md", "xmodel/CHARTER.md")))
+claim("each text folder has its manifest", all(os.path.exists(os.path.join(D1, d, "MANIFEST.md")) for d in ("data/newtext", "data/newtext2", "data/code", "data/de", "xmodel/data/newtext3")))
+claim("the components of each circuit are listed in the sufficiency scripts of rounds 4 and 5 and in the cross-model run specifications",
+      "L15H10" in open(os.path.join(D1, "code", "p4_02_sufficiency.py")).read() and "PATH = [" in open(os.path.join(D1, "code", "p5_01_sufficiency.py")).read()
+      and all('"sets"' in open(os.path.join(D1, "xmodel", "specs", f)).read() for f in os.listdir(os.path.join(D1, "xmodel", "specs")) if f.startswith("conf-")))
+claim("/interp-line-breaking}"); claim("https://doi.org/10.5281/zenodo.24112444"); note("release v1.0", "release label")  # the addresses themselves are skipped as \\url{...} below
+claim("Two larger archives of saved activations, which the number checks do not read, are attached to release v1.0 in the repository and are not part of the archived record")
 claim("within the first 1,000 steps"); claim("step 1,000")
 for s in ("2,000", "16,000 and 48,000"): note(s, "checkpoint steps")
 # design
@@ -324,9 +338,10 @@ claim(f"a token weight of {f2(en(20, 'intact')[0])} remains at width 20", all(ab
 P5 = re.search(r"PATH = \[([^\]]*)\]", open(os.path.join(D1, "code", "p5_01_sufficiency.py")).read()).group(1)
 PATH5 = [x.strip().strip('"') for x in P5.split(",")]
 claim("24 further components", len(PATH5) == 24); claim("24 components took fidelity", len(PATH5) == 24)
-claim(f"keeps {f2(V['r5.s.plus24.mean.fid'])} of the intact model's variation under mean ablation but only {f2(V['r5.s.plus24.resample.fid'])} under resample ablation")
+claim(f"its fidelity to the intact model's decision is {f2(V['r5.s.plus24.mean.fid'])} under mean ablation but only {f2(V['r5.s.plus24.resample.fid'])} under resample ablation, and neither figure is a share of the mechanism understood")
 claim("added 24 components", len(PATH5) == 24)
 claim(f"bring the circuit's fidelity to {f3(V['r5.s.plus24.mean.fid'])} under mean ablation")
+claim(f"the same circuit's fidelity is only {f2(V['r5.s.plus24.resample.fid'])}")
 note("widths of 20 to 120 characters", "round-5 widths"); note("widths 20, 30, 100 and 120", "round-5 widths")
 note("widths of 40 to 80 characters", "rounds 1-4 widths"); note("every width from 20 to 120 characters", "round-5 widths")
 note("1 for a perfect copy, 0 for a constant", "definition of fidelity")
@@ -375,12 +390,23 @@ claim(f"fidelity {f3(S_('plus24.mean.fid'))}, with {pc(S_('plus24.mean.sep'))}\\
 claim(f"The round-4 circuit keeps {pc(S_('circuit.mean.sep'))}\\% and {pc(S_('circuit.mean.width'))}\\%, and random additions of the same composition reach at most {f2(S_('rand.mean.fid')[1])}, {pc(S_('rand.mean.sep')[1])}\\% and {pc(S_('rand.mean.width')[1])}\\%")
 claim(f"fidelity {f2(S_('plus24.resample.fid'))} and {pc(S_('plus24.resample.sep'))}\\% of the separation, more than the round-4 circuit ({pc(S_('circuit.resample.sep'))}\\%)",
       S_("plus24.resample.sep") > S_("rand.resample.sep")[1])
-check(0.75 <= S_("plus24.mean.fid") <= 0.85 and 0.15 <= S_("plus24.resample.fid") <= 0.25, "about four-fifths and about a fifth")
+claim(f"the fuller circuit's fidelity is {f3(S_('plus24.mean.fid'))} under mean ablation and {f2(S_('plus24.resample.fid'))} under resample ablation")
+# the scope stated with these two figures is the frozen script's (heads of layers 1-5 everywhere; heads and MLPs of layers 6-23 at decision points)
+claim("with every head of layers 1 to 5 outside the circuit ablated at every position and every head and MLP of layers 6 to 23 outside it ablated at the decision points",
+      "heads of layers 1–5 outside the set ablated at every position; heads and MLPs of layers 6–23 outside the set ablated at decision points" in open(os.path.join(D1, "PROTOCOL-5.md")).read())
+claim("Neither figure is a share of the mechanism understood")
+for gone in ("four-fifths", "about a fifth", "sufficient;", "hold throughout", "cannot have seen", "written after the model", "The only causal account", "Nobody has shown"):
+    check(gone not in body, f"version-5 wording still present: {gone!r}")
 GK = [("en", 20), ("en", 30), ("en", 100), ("en", 120), ("code", 40), ("code", 60), ("de", 40), ("de", 60)]
 G_ = lambda t, w, q: V[f"r5.g.{t}.{w}.{q}"]
 claim(f"(AUROC {f3(min(G_(t, w, 'auroc') for t, w in GK))} to {f3(max(G_(t, w, 'auroc') for t, w in GK))} on held-out text; G1)")
 check(all(G_(t, w, "holds")["C"] and G_(t, w, "holds")["T"] for t, w in GK), "counting roles hold in all eight")
 check(G_("en", 20, "C.n") == 1 and G_("en", 20, "S.n") == 8 and G_("en", 20, "R.n") == 8, "width 20: one and eight items")
+claim(f"(G2, {V['r5.g.cnt']} of 16 cells)", V["r5.g.cnt"] == 16 and r5v["G2"] and 2 * len(GK) == 16)
+claim("At width 20 the count test rests on a single item", G_("en", 20, "C.n") == 1)
+claim("on a single count item", G_("en", 20, "C.n") == 1)
+claim("at English width 20 the counter cell rests on one item", G_("en", 20, "C.n") == 1)
+claim("At English width 20 the counter share comes from one item and the width shares from eight", G_("en", 20, "C.n") == 1 and G_("en", 20, "S.n") == 8 and G_("en", 20, "R.n") == 8)
 check([ (t, w) for t, w in GK if G_(t, w, "holds")["R"]] == [("en", 30), ("en", 100), ("en", 120), ("code", 60), ("de", 60)], "readers hold where stated")
 nR5 = sum(G_(t, w, "holds")["R"] for t, w in GK); nS5 = sum(G_(t, w, "holds")["S"] for t, w in GK)
 claim("in eight further conditions of width and text type, the readers held in five and the stored length was detectable in one", len(GK) == 8 and nR5 == 5 and nS5 == 1)
@@ -407,7 +433,7 @@ for t, why in (("2025--26", "creation period"), ("a4paper", "class option")):
     if t in body: note(t, why)
 
 # ---------------------------------------------------------------- 4. coverage
-skip = [r"\\(ref|label|cite[pt]?|citeauthor|input|inputrows|includegraphics|section|subsection|paragraph|bibliography(style)?|usetikzlibrary|resizebox)\*?(\[[^\]]*\])?\{[^}]*\}",
+skip = [r"\\url\{[^}]*\}", r"\\(ref|label|cite[pt]?|citeauthor|input|inputrows|includegraphics|section|subsection|paragraph|bibliography(style)?|usetikzlibrary|resizebox)\*?(\[[^\]]*\])?\{[^}]*\}",
         r"\\(begin|end)\{[^}]*\}(\{[^}]*\})?(\[[^\]]*\])?", r"\[[a-z!]+\]", r"P\{\d\.\dcm\}", r"\d?\.?\d+\\(linewidth|textwidth|columnwidth)",
         r"\\node\[[^\]]*\] \([a-z]+\) at \([^)]*\)", r"(fill|[a-z]+)=[a-z]*!?\d+", r"length=\d+mm", r"inner sep=\d+pt", r"minimum height=\d\.\dcm", r"bend right=\d+",
         r"rounded corners=\dpt", r"GPT-2", r"Pythia-[\d.]+[MB]", r"Qwen2\.5-0\.5B", r"Qwen3(-\d\.\dB)?", r"Gemma-4-E2B", r"SmolLM2(-1\.7B)?", r"OLMo-2-1B", r"Claude~3\.5", r"\bL\d+H\d+\b", r"COUNT4",

@@ -1,6 +1,6 @@
 {
  "exploration-activations.tar.xz": {
-  "contents": "exp03's saved activations (read only by the Figure 4 panel of make_figures.py, paper version 5)",
+  "contents": "exp03's saved activations (read only by the Figure 4 panel of make_figures.py, paper version 6)",
   "members": {
    "outputs/exp03_pythia-410m.npz": {
     "sha256": "a0c9afc23ad930b99b45a14723ed5691c1befca19fa27a407305e2c001ce0cb5",

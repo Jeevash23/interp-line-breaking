@@ -211,10 +211,10 @@
     "machine details": 1
    }
   },
-  "paper/v5-2026-11-10/check_paper.py": {
+  "paper/v6-2026-11-10/check_paper.py": {
    "kind": "adapted",
-   "original_sha256": "6d17ca0ea199f006c4a8aea1c89c530bcfe35ef6a68b707d056661903562a606",
-   "release_sha256": "e0612ffc8c65bf10bec8df5402156258e2a29f4bffdb45abff4790c1a2d7eb50",
+   "original_sha256": "a6f7f64cba2047ee7c83e47787d166b6587bda2316a7159698e8da7cd1bb84f7",
+   "release_sha256": "71a7dcd2f1608c8bfbf364b51944b9e10d71a9a10e983e6594496e9c1e689d3b",
    "reasons": [
     "the model configuration files are read from the copies shipped in models/configs/"
    ]
@@ -500,6 +500,6 @@
   "outputs/superseded-fp16/": "the first exploration runs in float16, superseded by the float32 reruns (exp01-exp03)",
   "*.log": "run logs",
   "*smoke*": "pipeline checks run before each freeze; the records say they are not results",
-  "paper/v5-2026-11-10/ (other files)": "build products (PDF, figures, LaTeX auxiliary files), the paper's own Makefile (machine paths; the release Makefile has its targets), working notes, the reference check, the arXiv tarball and its builder"
+  "paper/v6-2026-11-10/ (other files)": "build products (PDF, figures, LaTeX auxiliary files), the paper's own Makefile (machine paths; the release Makefile has its targets), working notes, the reference check, the arXiv tarball and its builder"
  }
 }

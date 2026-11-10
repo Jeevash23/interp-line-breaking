@@ -8,14 +8,14 @@ export OMP_NUM_THREADS ?= 2
 export MKL_NUM_THREADS ?= 2
 .NOTPARALLEL:
 
-PAPER := paper/v5-2026-11-10
+PAPER := paper/v6-2026-11-10
 
 .PHONY: help setup setup-experiment python-check unpack attachments check-freezes check tables figures pdf models
 
 help:
 	@echo "make setup             create .venv with the pinned environment (uv sync; see ENVIRONMENT.md)"
 	@echo "make check             CPU only, about 8 minutes, no model and no network: unpack the saved outputs,"
-	@echo "                       check the freeze records, and run all 661 checks of the paper's numbers against the outputs"
+	@echo "                       check the freeze records, and run all 712 checks of the paper's numbers against the outputs"
 	@echo "make check-freezes     only the freeze records (FROZEN.md, xmodel/FROZEN.md)"
 	@echo "make tables            rewrite the paper's tables from the saved outputs"
 	@echo "make attachments       unpack the two release attachments (put them in attachments/ first)"
